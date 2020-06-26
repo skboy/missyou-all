@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.missyou</groupId>
+        <artifactId>missyou-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>missyou-all</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <description>单体应用打包器</description>
+
+    <scm>
+        <connection>scm:git:http://gitlab.skboyed.xyz/missyou/missyou-dependencies.git</connection>
+        <developerConnection>scm:git:http://gitlab.skboyed.xyz/missyou/missyou-dependencies.git</developerConnection>
+        <url>http://gitlab.skboyed.xyz/missyou/missyou-dependencies</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>skboy</id>
+            <name>skboy</name>
+            <email>364971779@qq.com</email>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <!-- 需要打包进单体的服务 -->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.missyou.all.AllApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
