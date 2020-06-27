@@ -28,7 +28,11 @@
     </developers>
 
     <dependencies>
-        <!-- 需要打包进单体的服务 -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>missyou-controller-dashboard</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
