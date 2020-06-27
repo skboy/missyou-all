@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>missyou-all</artifactId>
-    <version>1.0.7.RELEASE</version>
+    <version>1.0.8-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>单体应用打包器</description>
 
@@ -17,7 +17,7 @@
         <connection>scm:git:http://gitlab.skboyed.xyz/missyou/missyou-all.git</connection>
         <developerConnection>scm:git:http://gitlab.skboyed.xyz/missyou/missyou-all.git</developerConnection>
         <url>http://gitlab.skboyed.xyz/missyou/missyou-all</url>
-      <tag>1.0.7.RELEASE</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <developers>
