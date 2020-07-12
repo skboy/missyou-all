@@ -1,3 +1,5 @@
+server:
+  port: 8080
 spring:
   application:
     name: missyou-all
@@ -6,7 +8,7 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://112.74.36.150:30030/missyou?serverTimezone=Asia/Shanghai&useLegacyDatetimeCode=false&nullNamePatternMatchesAll=true&zeroDateTimeBehavior=CONVERT_TO_NULL&tinyInt1isBit=false&autoReconnect=true&useSSL=false&pinGlobalTxToPhysicalConnection=true&allowPublicKeyRetrieval=true
+    jdbc-url: jdbc:mysql://112.74.36.150:30030/missyou?serverTimezone=Asia/Shanghai&useLegacyDatetimeCode=false&nullNamePatternMatchesAll=true&zeroDateTimeBehavior=CONVERT_TO_NULL&tinyInt1isBit=false&autoReconnect=true&useSSL=false&pinGlobalTxToPhysicalConnection=true&allowPublicKeyRetrieval=true
     username: root
     password: skboy@mysql215405
     hikari:
@@ -18,3 +20,14 @@ spring:
       max-lifetime: 1800000
       connection-timeout: 30000
       connection-test-query: SELECT 1
+security:
+  oauth2:
+    client:
+      client-id: dashboard
+      client-secret: dashboard
+      access-token-uri: http://localhost:${server.port}/oauth/token
+      user-authorization-uri: http://localhost:${server.port}/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:${server.port}/oauth/check_token
+    authorization:
+      check-token-access: http://localhost:${server.port}/oauth/check_token
